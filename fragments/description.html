@@ -1,0 +1,241 @@
+﻿<style>
+  .description { min-width: 800px; max-width: 1000px; text-align: left; display:inline-block; }
+  .description > header { padding: 0 5em; }
+  .description h1 { font-size: 1.2em; border-bottom: 1px solid #f0f0f0; }
+  .description h2 { font-size: 1.1em; padding: .2em .4em; background-color: #fafafa; }
+  .description table.commands { width: 100%; }
+  .description th { border-bottom: 1px solid #f0f0f0; color: gray; }
+  .description .command { font-weight: bold; vertical-align: top; white-space: nowrap; }
+  
+  
+  .description .content { font-size: 14px; padding: 0 20px 0 0; }
+  .description .content h1 { font-size: 1.3em; padding: .4em 0; border-bottom: 1px solid #f0f0f0; text-align:center; }
+  .description .content h2 { font-size: 1.1em; padding: .2em 0; background-color: #fafafa; }
+  .description .content figcaption { font-size: 0.9em; text-align: center; }
+  .description .content .dgl { text-align: center; }
+  .description .index { width: 150px; vertical-align: top; border-left: 1px solid #f0f0f0; padding-left: 10px;}
+  
+  .text-description { }
+  .table-content {-webkit-padding-start: 20px;}
+</style>
+
+<main class="description">
+  <table cellpadding="5" style="width:100%">
+    <tr>
+      <td class="content">
+        <h1>ShapesPsi Language and AnimePsi Languages Description</h1>
+        <p>
+          The goal of <b>Anisha</b> is to build two DSLs for animating basic shapes. The Anisha case study has had as main objective to 
+          illustrate some <b><a href="/api">PsiXML Interpreter</a></b> features, called <b>PsiXML</b>. Firstly, this case study allows us to validate the heterogeneous source 
+          information (XML and JSON) binding. This feature gives versatility to the XML-based languages in PsiXML. Secondly, Anisha let us test the 
+          coexistence of multiple Psi languages as well as the feature of runing multiple Psi programs with ease information exchange and functionality 
+          sharing. In general, PsiXML allow creating XML-based DSL with a high level of abstraction, easy to understand, extendable and combinable.
+        </p>
+        
+
+        <section id="fd-shapes">
+          <h2>1. Shapes Component </h2>
+          <h3 class="subtitle">ShapesPsi Grammar</h3>
+          <p>
+            The <b>ShapesPsi Language</b> is a DSL that follows an XML-based grammar for creating circles and rectangles. The Figure 1 shows the 
+            <i>Psi Language Structure Diagram</i> (<b>PsiLSD</b>) of the ShapesPsi Language. </p>
+          <figure>
+            <div id="graphs-grammar-diagram" class="dgl">
+              <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading diagram ...</b>
+            </div>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  $("#graphs-grammar-diagram")
+                    .empty()
+                    .visorPsi({
+                      acronym: "anisha",
+                      url: "/PsiXML/source/models/diagram/anisha/grammar.shapes.dgl.xml"
+                    });
+                }, 500);  
+              });
+            </script>
+            <figcaption>Figure 1. PsiLSD of the ShapesPsi Language.</figcaption>
+          </figure>
+          <p>
+            In Figure 1, we can summarize that the root tag <b>Shapes</b> is the beginning of the program. Then, we can define: 
+            <ol>
+              <li>
+                <b>Circle</b> tag (opcional, multiple): creating circles based on SVG.
+              <li>
+                <b>Rectangle</b> (opcional, multiple): creating rectangles based on SVG.
+              </li>
+            </ol>
+          </p>
+          <div id="shapes-grammar-table" class="grammar-table">
+            <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading table ...</b>
+          </div>
+          <script type="text/javascript">
+            $(function () {
+              setTimeout(function () {
+                var params = { componentId: "shapes_psi", caption: "Table 1. Psi Grammar Validator Attributes of the ShapesPsi Language" },
+                    content = DocsPsi.transform("anisha", { alias: "psi-grammar", params: params });
+                $("#shapes-grammar-table").empty().append(content);
+              }, 600);
+            });
+          </script>
+        
+          <h3 class="subtitle">Classes diagram</h3>
+          <p>
+            The class diagram for <b>Shapes Component</b> is shown in Figure 2. The <i>Shapes</i> class defines the set of circles and rectangles. 
+            The <i>Base</i> abstract class defines a generic figure, while the <i>Circle</i> class paints a circle with a text in the middle on a 
+            SVG canvas, and the <i>Rectangle</i> class paints a rectangle with a text in the middle. All the circles and rectangles coded are stored 
+            in <b>Psi Data</b> so that they can be used by other programs and languages. 
+          </p>
+          <figure>
+            <div id="class-diagram-basic-shapes" class="dgl">
+              <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading diagram ...</b>
+            </div>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  $("#class-diagram-basic-shapes")
+                    .empty()
+                    .visorPsi({
+                      acronym: "shapes",
+                      url: "/PsiXML/source/models/diagram/anisha/basic.shapes.dgl.xml"
+                    });
+                }, 700);
+              });
+            </script>
+            <figcaption>Figure 2. Class diagram for the <b>Shapes Component</b>.</figcaption>
+          </figure>
+        </section>
+
+
+
+        <section id="fd-anima">
+          <h2>1. Anime Component </h2>
+          <h3 class="subtitle">AnimePsi Grammar</h3>
+          <p>
+            The <b>AnimePsi Language</b> is a DSL that follows an XML-based grammar for moving figures defined with <b>ShapesPsi</b>. The Figure 3 shows the
+            <b>PsiLSD</b> of the AnimePsi Language. 
+          </p>
+          <figure>
+            <div id="anima-grammar-diagram" class="dgl">
+              <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading diagram ...</b>
+            </div>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  $("#anima-grammar-diagram")
+                    .empty()
+                    .visorPsi({
+                      acronym: "anisha",
+                      url: "/PsiXML/source/models/diagram/anisha/grammar.anima.dgl.xml"
+                    });
+                }, 1100);
+              });
+            </script>
+            <figcaption>Figure 3. PsiLSD of the AnimaPsi Language.</figcaption>
+          </figure>
+          <p>
+            According to Figure 3, the <b>Animates</b> root tag specifies a set of figures movements, i.e. multiple <b>Move</b> tags.
+            The <b>Move</b> tag defines a reference to the figure (<i>key</i> attribute), a path for the movement (<i>path</i> attribute), 
+            the number of steps in the path (<i>steps</i> attribute), the number of seconds for movement (<i>seconds</i> attribute), the 
+            initial waiting time (<i>wait</i> attribute, default 0) and if the movement must be repeated (<i>repeat</i> attribute, default "no"). 
+          </p>
+          <div id="anima-grammar-table" class="grammar-table">
+            <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading table ...</b>
+          </div>
+          <script type="text/javascript">
+            $(function () {
+              setTimeout(function () {
+                var params = { componentId: "anima_psi", caption: "Table 1. Psi Grammar Validator Attributes of the AnimePsi Language" },
+                    content = DocsPsi.transform("anisha", { alias: "psi-grammar", params: params });
+                $("#anima-grammar-table").empty().append(content);
+              }, 1200);
+            });
+          </script>
+
+          <h3 class="subtitle">Classes diagram</h3>
+          <p>
+            The <b>Anime Component</b> implements the functionality related to the <b>AnimePsi</b> language, as shown in the class diagram of Figure 4. 
+            This component has two classes: <i>Animates</i> and <i>Move</i>, binded to the <b>Animates</b> and <b>Move</b> tags respectively. The 
+            <i>Animates</i> class starts the animation program, while the <i>Move</i> class implements the movement binded to <b>Move</b> tag and based 
+            on the definition of the SVG path tag.
+          </p>
+          <figure>
+            <div id="class-diagram-basic-anima" class="dgl">
+              <img src="../images/loading.gif" alt="Loading ..." /> <b>Loading diagram ...</b>
+            </div>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  $("#class-diagram-basic-anima")
+                    .empty()
+                    .visorPsi({
+                      acronym: "shapes",
+                      url: "/PsiXML/source/models/diagram/anisha/basic.anima.dgl.xml"
+                    });
+                }, 700);
+              });
+            </script>
+            <figcaption>Figure 4. Class diagram for the <b>Anima Component</b>.</figcaption>
+          </figure>
+        </section>
+
+
+        <section id="fd-running">
+          <h2>3. Running the examples</h2>
+          <p>
+            The next XML file program shows a code example written in <b>ShapesPsi</b> language. In this code we can see 
+            how to create a red circle with centre at point (100, 100), <b>Circle</b> tag, radius 30 (all units in pixels), and a blue 
+            rectangle with centre at point (250, 100), <b>Rectangle</b> tag, weight 20 and high 10. Evaluation can be seen <a href="/anisha/basic">here</a>.
+          </p>
+          <p id="basic-sample-p">
+            <textarea id="basic-sample" class="psi-xml-editor"></textarea>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  var program = PsiXML.loadXMLSync("code/basic.xml"),
+                      length = $("#basic-sample-p").width(),
+                      editor = CodeMirror.fromTextArea($("#basic-sample").get(0), { mode: "text/html", lineNumbers: true, readOnly: true }),
+                      text = (new XMLSerializer()).serializeToString(program);
+                  editor.setValue(text);
+                  $("#basic-sample").siblings(".CodeMirror").css({ "width": length + "px", "height": "80px" });
+                }, 800);
+              });
+            </script>
+          </p>
+          <p>
+            In next XML file program we can see the characters motion defined in the previous fragment. In evaluating this <b>AnimePsi</b> program, 
+            "Luke" approaches to "Obi-Wan" and this last one runs off. Evaluation can be seen <a href="/anisha/runs">here</a>.
+          </p>
+          <p id="runs-sample-p">
+            <textarea id="runs-sample" class="psi-xml-editor"></textarea>
+            <script type="text/javascript">
+              $(function () {
+                setTimeout(function () {
+                  var program = PsiXML.loadXMLSync("code/basic.xml"),
+                      length = $("#runs-sample-p").width(),
+                      editor = CodeMirror.fromTextArea($("#runs-sample").get(0), { mode: "text/html", lineNumbers: true, readOnly: true }),
+                      text = (new XMLSerializer()).serializeToString(program);
+                  editor.setValue(text);
+                  $("#runs-sample").siblings(".CodeMirror").css({ "width": length + "px", "height": "90px" });
+                }, 1200);
+              });
+            </script>
+          </p>
+        </section>
+      </td>
+
+
+
+      <td class="index">
+        <h1>Table of contents</h1>
+        <ol class="table-content">
+          <li><a href="#fd-shapes">Shapes Component</a></li>
+          <li><a href="#fd-anime">Anime Component</a></li>
+          <li><a href="#fd-running">Running the examples</a></li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+</main>
+

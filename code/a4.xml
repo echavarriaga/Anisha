@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animates name="Mova p1">
+  <Move key="p4" steps="50" seconds="2" path="L400,220"/>
+</Animates>

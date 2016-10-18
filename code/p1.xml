@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shapes name="Basic example ShapesPsi">
+  <Circle id="p1" center="70,50" radius="20" label="P1" style="fill:#0099ff;stroke:gray;stroke-width:2px"/>
+</Shapes>

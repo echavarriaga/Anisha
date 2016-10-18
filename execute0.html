@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Sample Anisha</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8;" />
+  <link rel="shortcut icon" href="/favicon32x32.ico" />
+  <link href="../css/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../css/jquery.svg.css" rel="stylesheet" />
+  
+  <link href="css/app.css" rel="stylesheet" type="text/css" />
+
+  <script src="../js/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/jquery/jquery-ui.smoothness.js" type="text/javascript"></script>
+
+  <script src="../js/utils/jquery-svg.min.js" type="text/javascript"></script>
+  <script src="../js/psi/PsiXML.js"></script>
+  <script src="../js/psi/Anisha.js"></script>
+  <script src="js/main.js"></script>
+  <script src="../js/psi/Anisha.js"></script>
+  <script type="text/javascript">
+    var context = null;
+    $(function () {
+      try {
+        //*/ear SVG y context
+        $("#main-svg").svg({ settings: { height: 800 }});
+        context = { svg: $("#main-svg").svg("get") }
+        Examples(gup("example"));
+      }
+      catch (e) { console.error(e); }
+    });
+  </script>
+</head>
+<body>
+  <div class="main-app">
+    <header class="header">
+      <nav class="nav-header">
+        <a id="api-btn">API Documentation</a>
+        <a id="samples-btn">Examples</a>
+        <a id="psiengine-btn">Go PsiEngine</a>
+      </nav>
+      <img src="images/top.png" />
+    </header>
+
+    <section id="main" class="main">
+      <div id="main-svg"></div>
+    </section>
+  </div>
+</body>
+</html>

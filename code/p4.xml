@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shapes name="Basic example ShapesPsi">
+  <Rectangle id="p4" center="70,200" width="40" height="40" label="P4" style="fill:#10af0e;stroke:gray;stroke-width:2px"/>
+</Shapes>

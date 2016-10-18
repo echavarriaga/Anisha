@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shapes name="the characters ...">
+  <Circle data-document="characters:info=Character[id=p1]" data-context="features:qt=p1"
+       id="cp1" center="{{qt.point}}" radius="30" label="{{info.first}}"
+       style="stroke:black;stroke-width:1px;fill:{{qt.color}}"/>
+  <Rectangle data-document="characters:info=Character[id=p2]" data-context="features:qt=p2"
+       id="cp2" center="{{qt.point}}" width="60" height="40" label="{{info.first}}"
+       style="stroke:black;stroke-width:1px;fill:{{qt.color}}"/>
+</Shapes>
+
+
