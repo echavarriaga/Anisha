@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Animates name="runs, Obi-Wan, runs">
-  <Move key="cp1" steps="50" seconds="3" path="L100,50L180,200"/>
-  <Move key="cp2" steps="50" seconds="5" wait="4"
-        path="C250,100 400,100 400,200 S550,300 550,200 C550,50 100,50 100,200 L100,300 L250,300 l250,200"/>
-</Animates>
