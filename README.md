@@ -29,8 +29,10 @@ The next XML file program shows a code example written in **ShapesPsi** language
 **Circle** tag, radius 30 (all units in pixels), and a blue rectangle with centre at point (250, 100), **Rectangle** tag, weight 20 and high 10. Evaluation can 
 be seen here.
 ```xml
-<?xml version="1.0" encoding="utf-8"?><Shapes name="Basic example ShapesPsi">
+<?xml version="1.0" encoding="utf-8"?>
+<Shapes name="Basic example ShapesPsi">
   <Circle id="c1" center="100,100" radius="30" label="Circle" style="fill:red;stroke:gray;stroke-width:2px"/>
-  <Rectangle id="r1" center="250,100" width="70" height="50" label="Rectangle" style="fill:blue;stroke:gray;stroke-width:2px"/>
+  <Rectangle id="r1" center="250,100" width="70" height="50" label="Rectangle" 
+             style="fill:blue;stroke:gray;stroke-width:2px"/>
 </Shapes>
 ```
