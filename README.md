@@ -20,8 +20,9 @@ The ShapesPsi Language is a DSL that follows an XML-based grammar for creating c
 ![PsiLSD of the ShapesPsi Language](images/fig1.png)<br>
 **Figure 1**. PsiLSD of the ShapesPsi Language. <br>
 In Figure 1, we can summarize that the root tag **Shapes** is the beginning of the program. Then, we can define:<br>
-1. **Circle** tag (opcional, multiple): creating circles based on SVG. *Attributes*: id (identifier), center (x,y), radius (default=10), style(CSS) 
-2. **Rectangle** (opcional, multiple): creating rectangles based on SVG. *Attributes*: id (identifier, center (x,y), width (default=10), height (default=10), style(CSS)
+
+1.  **Circle** tag (opcional, multiple): creating circles based on SVG. *Attributes*: id (identifier), center (x,y), radius (default=10), style(CSS) 
+2.  **Rectangle** (opcional, multiple): creating rectangles based on SVG. *Attributes*: id (identifier, center (x,y), width (default=10), height (default=10), style(CSS)
 
 ## Running the examples
 
