@@ -52,7 +52,7 @@ The **Anime Component** implements the functionality related to the AnimePsi lan
 the movement binded to **Move** tag and based on the definition of the SVG path tag.
 
 ![Class diagram for the Amime Component](images/fig4.png)<br>
-**Figure 3**. Class diagram for the Anime Component.
+**Figure 4**. Class diagram for the Anime Component.
 
 ## 4. Running the examples
 
