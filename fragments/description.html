@@ -212,7 +212,7 @@
             <script type="text/javascript">
               $(function () {
                 setTimeout(function () {
-                  var program = PsiXML.loadXMLSync("code/basic.xml"),
+                  var program = PsiXML.loadXMLSync("code/runs.xml"),
                       length = $("#runs-sample-p").width(),
                       editor = CodeMirror.fromTextArea($("#runs-sample").get(0), { mode: "text/html", lineNumbers: true, readOnly: true }),
                       text = (new XMLSerializer()).serializeToString(program);
